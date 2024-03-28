@@ -151,7 +151,8 @@ static const unsigned int maxhtab = 200;			/* tab menu height */
 #endif																				// ALT_TAB_PATCH
 
 /* Indicators: see patch/bar_indicators.h for options */
-static int tagindicatortype = INDICATOR_TOP_LEFT_SQUARE;
+// static int tagindicatortype = INDICATOR_TOP_LEFT_SQUARE;
+static int tagindicatortype = INDICATOR_BOTTOM_BAR_SLIM;
 static int tiledindicatortype = INDICATOR_NONE;
 static int floatindicatortype = INDICATOR_TOP_LEFT_SQUARE;
 #if FAKEFULLSCREEN_CLIENT_PATCH && !FAKEFULLSCREEN_PATCH
@@ -462,8 +463,8 @@ static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 static char *tagicons[][NUMTAGS] =
 #endif // NAMETAG_PATCH
 		{
-				// [DEFAULT_TAGS] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"},
-				[DEFAULT_TAGS] = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},
+				[DEFAULT_TAGS] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"},
+				// [DEFAULT_TAGS] = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},
 				[ALTERNATIVE_TAGS] = {"A", "B", "C", "D", "E", "F", "G", "H", "I"},
 				[ALT_TAGS_DECORATION] = {"<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>"},
 		};
@@ -919,8 +920,8 @@ static const Key keys[] = {
 		{MODKEY, XK_Return, spawn, sh(term)},
 		{MODKEY, XK_i, spawn, sh("gpick -p")},
 		{MODKEY, XK_space, spawn, sh("rofi -show-icons -show drun")},
-		{MODKEY, XK_a, spawn, sh("librewolf")},
-		{MODKEY, XK_r, spawn, sh("vscodium")},
+		{MODKEY, XK_r, spawn, sh("librewolf")},
+		{MODKEY, XK_a, spawn, sh("vscodium")},
 		{MODKEY, XK_d, spawn, sh("obsidian")},
 		{MODKEY, XK_c, spawn, sh("blueman-manager")},
 		{MODKEY, XK_v, spawn, sh("pavucontrol")},
@@ -1322,8 +1323,8 @@ static const Key keys[] = {
 		{MODKEY | ControlMask, XK_numbersign, setborderpx, {.i = 0}},
 #endif // SETBORDERPX_PATCH
 #if CYCLELAYOUTS_PATCH
-		{MODKEY | ControlMask, XK_comma, cyclelayout, {.i = -1}},
-		{MODKEY | ControlMask, XK_period, cyclelayout, {.i = +1}},
+		{MODKEY , XK_comma, cyclelayout, {.i = -1}},
+		{MODKEY , XK_period, cyclelayout, {.i = +1}},
 #endif // CYCLELAYOUTS_PATCH
 #if MPDCONTROL_PATCH
 		{MODKEY, XK_F1, mpdchange, {.i = -1}},
