@@ -920,7 +920,7 @@ static const Key keys[] = {
 		{MODKEY, XK_Return, spawn, sh(term)},
 		{MODKEY, XK_i, spawn, sh("gpick -p")},
 		{MODKEY, XK_space, spawn, sh("rofi -show-icons -show drun")},
-		{MODKEY, XK_r, spawn, sh("librewolf")},
+		{MODKEY, XK_r, spawn, sh("thorium-browser")},
 		{MODKEY, XK_a, spawn, sh("vscodium")},
 		{MODKEY, XK_d, spawn, sh("obsidian")},
 		{MODKEY, XK_c, spawn, sh("blueman-manager")},
@@ -1042,7 +1042,7 @@ static const Key keys[] = {
 #if INSETS_PATCH
 		{MODKEY | ShiftMask | ControlMask, XK_a, updateinset, {.v = &default_inset}},
 #endif // INSETS_PATCH
-		{MODKEY | ControlMask, XK_Return, zoom, {0}},
+		{MODKEY | ShiftMask, XK_Return, zoom, {0}},
 #if VANITYGAPS_PATCH
 		{MODKEY | ShiftMask, XK_equal, incrgaps, {.i = +1}},
 		{MODKEY | ShiftMask, XK_minus, incrgaps, {.i = -1}},
