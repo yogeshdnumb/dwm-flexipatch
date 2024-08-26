@@ -920,13 +920,13 @@ static const Key keys[] = {
 	{ MODKEY,            		    XK_space, spawn,          SHCMD("rofi -show drun -show-icons")},
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("thorium-browser")},
 	{ MODKEY,                       XK_a,      spawn,          SHCMD("vscodium")},
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("obsidian")},
+	{ MODKEY,                       XK_d,      spawn,          SHCMD("obsidian")},
 	{ MODKEY,                       XK_c,      spawn,          SHCMD("blueman-manager")},
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("pavucontrol")},
-	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("thunar")},
-	{ MODKEY,                       XK_d,      spawn,          SHCMD(TERM " -e nvim")},
-	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD(TERM " -e lf")},
-	{ MODKEY,                       XK_p,      spawn,          SHCMD(TERM " -e btm")},
+	{ MODKEY,             XK_w,      spawn,          SHCMD("pcmanfm")},
+	// { MODKEY,                       XK_d,      spawn,          SHCMD(TERM " -e nvim")},
+	{ MODKEY,             XK_t,      spawn,          SHCMD(TERM " -e lf")},
+	{ MODKEY,                       XK_p,      spawn,          SHCMD(TERM " -e btop")},
 	{ MODKEY,                       XK_Escape,      spawn,          SHCMD("rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command \'{cmd}\'")},
 	{ 0,                       XK_Print,      spawn,          SHCMD("flameshot gui")},
 	{ MODKEY,            		    XK_i, spawn,          SHCMD("gpick -p")},
@@ -1004,8 +1004,8 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_j,          pushdown,               {0} },
 	{ MODKEY|ControlMask,           XK_k,          pushup,                 {0} },
 	#endif // PUSH_PATCH / PUSH_NO_MASTER_PATCH
-	{ MODKEY,                       XK_i,          incnmaster,             {.i = +1 } },
-	{ MODKEY,                       XK_d,          incnmaster,             {.i = -1 } },
+	{ MODKEY,                       XK_BackSpace,          incnmaster,             {.i = +1 } },
+	{ MODKEY,                       XK_semicolon,          incnmaster,             {.i = -1 } },
 	#if FLEXTILE_DELUXE_LAYOUT
 	{ MODKEY|ControlMask,           XK_i,          incnstack,              {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_u,          incnstack,              {.i = -1 } },
@@ -1051,6 +1051,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask|ControlMask, XK_a,          updateinset,            {.v = &default_inset } },
 	#endif // INSETS_PATCH
 { MODKEY|ControlMask,                       XK_Return,     zoom,                   {0} },
+{ MODKEY|ShiftMask,                       XK_Return,     zoom,                   {0} },
 	#if VANITYGAPS_PATCH
 { MODKEY,              XK_equal,          incrgaps,               {.i = +1 } },
 { MODKEY,    XK_minus,          incrgaps,               {.i = -1 } },
@@ -1124,7 +1125,7 @@ static const Key keys[] = {
 	#if XRDB_PATCH && !BAR_VTCOLORS_PATCH
 	{ MODKEY|ShiftMask,             XK_r,         xrdb,                   {.v = NULL } },
 	#endif // XRDB_PATCH
-	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,                       XK_t,          setlayout,              {.v = &layouts[0]} },
 	// { MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
 	#if COLUMNS_LAYOUT
@@ -1421,8 +1422,8 @@ static const Button buttons[] = {
 	 * to control these separately (i.e. to retain the feature to move a tiled window
 	 * into a floating position).
 	 */
-	{ ClkClientWin,         MODKEY|ControlMask,              Button1,        movemouse,    {.i = 0} },
-	{ ClkClientWin,         MODKEY,              Button1,        placemouse,    {.i = 0} },
+	{ ClkClientWin,         MODKEY,              Button1,        movemouse,    {.i = 0} },
+	{ ClkClientWin,         MODKEY|ControlMask,              Button1,        placemouse,    {.i = 0} },
 	#else
 	{ ClkClientWin,         MODKEY,              Button1,        movemouse,      {0} },
 	#endif // PLACEMOUSE_PATCH
