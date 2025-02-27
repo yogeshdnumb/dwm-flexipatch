@@ -92,6 +92,40 @@ loadxrdb()
 				XRDB_LOAD_COLOR("dwm.selDWDLbgcolor", selDWDLbgcolor);
 				XRDB_LOAD_COLOR("dwm.selSPRLbgcolor", selSPRLbgcolor);
 				XRDB_LOAD_COLOR("dwm.selfloatbgcolor", selfloatbgcolor);
+// dwm.normTTBbgcolor: {}
+// dwm.normLTRbgcolor: {}
+// dwm.normMONObgcolor: {}
+// dwm.normGRIDbgcolor: {}
+// dwm.normGRD1bgcolor: {}
+// dwm.normGRD2bgcolor: {}
+// dwm.normGRDMbgcolor: {}
+// dwm.normHGRDbgcolor: {}
+// dwm.normDWDLbgcolor: {}
+// dwm.normSPRLbgcolor: {}
+// dwm.normfloatbgcolor: {}
+// dwm.actTTBbgcolor: {}
+// dwm.actLTRbgcolor: {}
+// dwm.actMONObgcolor: {}
+// dwm.actGRIDbgcolor: {}
+// dwm.actGRD1bgcolor: {}
+// dwm.actGRD2bgcolor: {}
+// dwm.actGRDMbgcolor: {}
+// dwm.actHGRDbgcolor: {}
+// dwm.actDWDLbgcolor: {}
+// dwm.actSPRLbgcolor: {}
+// dwm.actfloatbgcolor: {}
+// dwm.selTTBbgcolor: {}
+// dwm.selLTRbgcolor: {}
+// dwm.selMONObgcolor: {}
+// dwm.selGRIDbgcolor: {}
+// dwm.selGRD1bgcolor: {}
+// dwm.selGRD2bgcolor: {}
+// dwm.selGRDMbgcolor: {}
+// dwm.selHGRDbgcolor: {}
+// dwm.selDWDLbgcolor: {}
+// dwm.selSPRLbgcolor: {}
+// dwm.selfloatbgcolor: {}
+
 				#endif // BAR_FLEXWINTITLE_PATCH
 				#if BAR_STATUS2D_XRDB_TERMCOLORS_PATCH && BAR_STATUS2D_PATCH
 				XRDB_LOAD_COLOR("color0", termcol0);
