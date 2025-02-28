@@ -820,7 +820,7 @@ static const char *xkb_layouts[] = {
 			{MODKEY | ControlMask, KEY, toggleview, {.ui = 1 << TAG}},            \
 			{MODKEY | ShiftMask, KEY, combotag, {.ui = 1 << TAG}},                \
 			{MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}}, \
-			{MODKEY | Mod4Mask | ShiftMask, KEY, swaptags, {.ui = 1 << TAG}},
+			{MODKEY | Mod1Mask | ShiftMask, KEY, swaptags, {.ui = 1 << TAG}},
 #elif COMBO_PATCH && TAGOTHERMONITOR_PATCH
 #define TAGKEYS(KEY, TAG)                                                   \
 	{MODKEY, KEY, comboview, {.ui = 1 << TAG}},                               \
@@ -848,9 +848,9 @@ static const char *xkb_layouts[] = {
 #define TAGKEYS(KEY, TAG)                                                   \
 	{MODKEY, KEY, view, {.ui = 1 << TAG}},                                    \
 			{MODKEY | ControlMask, KEY, toggleview, {.ui = 1 << TAG}},            \
-			{MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},                     \
+			{MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},                      \
 			{MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}}, \
-			{MODKEY | Mod4Mask | ShiftMask, KEY, swaptags, {.ui = 1 << TAG}},
+			{MODKEY | Mod1Mask | ShiftMask, KEY, swaptags, {.ui = 1 << TAG}},
 #elif TAGOTHERMONITOR_PATCH
 #define TAGKEYS(KEY, TAG)                                                   \
 	{MODKEY, KEY, view, {.ui = 1 << TAG}},                                    \
